@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO DE ADIVINHAÇÂO</title>
+</head>
+<body>
+    <h2>Adivinhe o Número(1 a 10)</h2>
+    <input type="number" id="palpite">
+    <button onclick="verificar()">Tentar</button>
+    <p id="mensagem"></p>
+
+    <script>
+    
+     let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+     let tentativas = 0;
+     
+     function verificar() {
+    
+     let palpite = Number(document.getElementById("palpite").value);
+     tentativas ++;
+    
+     if(palpite === numeroSecreto) {
+        document.getElementById("mensagem").innerText = 
+        "Você acertou em " + tentativas + " tentativas!!!";
+     } else {
+        document.getElementById("mensagem").innerText = 
+        "Deixa de ser burro!! Tenta denovo";
+     }
+  
+
+
+}
+    
+    
+    
+
+      
+
+
+
+    </script>
+
+    
+</body>
+</html>
