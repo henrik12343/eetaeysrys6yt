@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas</title>
+</head>
+<body>
+    <h2>Sistemas de notas</h2>
+    <input type="number" id="nota1" placeholder="Nota1">
+    <input type="number" id="nota2" placeholder="Nota2">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(){
+            let n1 =Number(document.getElementById("nota1").value);
+            let n2 =Number(document.getElementById("nota2").value);
+
+            let media = (n1 + n2) /2;
+            if(media >= 7){
+                document.getElementById("resultado").innerText = "Aprovado! média" + media;
+            
+            }
+            else{
+                document.getElementById("resultado").innerText = "Reprovado! Média" + media ;
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
